@@ -1,0 +1,81 @@
+Version 1.4.6
+    Fixed:
+        - Compatibility with EssGrid 3.0.17+
+
+Version 1.4.5
+    Fixed:
+        - Compatibility with WP 6.0.2
+        - Update plugins to their latest versions
+
+    Removed:
+        - Gplus links
+
+Version 1.4.4
+    Fixed:
+        - Compatibility with WP 5.9.3
+        - Update plugins to their latest versions
+        - Update demo data
+
+    Added:
+        - Smash Balloon Instagram Feed plugin
+
+    Removed:
+        - ThemeREX Socials plugin
+
+
+Version 1.4.2
+    Fixed:
+        - Compatibility with WP 5.8.2
+        - Compatibility with PHP 8
+        - Update plugins to their latest versions
+        - Update demo data
+
+    Added:
+        - trx_socials plugin
+
+    Removed:
+        - Instagram-feed plugin
+
+Version: 1.4.1
+    Added:
+        - Updated plugins to their latest versions
+    Changed:
+        - Update demo data    
+    Fixed:
+        - Improve theme styles
+
+Version: 1.4.0
+    Added:
+        - WP GDPR Compliance plugin
+        - Contact Form 7 plugin
+        - Alert to Demo data installation
+        - Privacy Policy, Service Plus pages
+    Changed:
+        - Update default contact forms to make them GDPR-compliant
+        - Replace default contact forms with Contact Form 7
+        - Update demo data
+    Fixed:
+        - Improve compatibility with PHP 7.3
+        - Update plugins to their latest versions
+        - Improve theme styles
+    Removed:
+        - Support page, Video Tutorials page
+
+Version 1.3.1
+    Compability with WP 4.9.5
+    Compability woocommerce 3+
+    Updated plugins to their latest versions
+
+Version 1.3
+      Fixed team avatar on single page
+
+Version 1.2 
+      Fixed hovers on services and prices
+
+Version 1.1
+ 
+    Plugins updated
+	Documentation updated
+	Dummy data import fixed
+
+Version 1.0 (EV.23)

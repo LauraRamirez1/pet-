@@ -1,0 +1,23 @@
+/* WPBakery Page Builder Extension Bundle
+----------------------------------------------------------------- */
+
+/* Tooltip */
+.tooltipster-base.tooltipster-light {
+	border: none;
+	border-radius: 0;
+	box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+.tooltipster-base.tooltipster-light .tooltipster-content {
+	padding: 1em 1em;
+	border: none;
+	background-color: #13162b;
+	color: #fff;
+}
+.tooltipster-base.tooltipster-light .tooltipster-arrow span {
+	border-top-color: #13162b !important;
+}
+.cq-hotspots .hotspot-item a.cq-tooltip span {
+	width: 10px;
+	height: 10px;
+	margin: -5px 0 0 -5px;
+}

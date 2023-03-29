@@ -1,0 +1,57 @@
+/* MailChimp for WP styles
+----------------------------------------------------------------- */
+.mc4wp-form {
+	position:relative;
+	padding-right: 7em;
+}
+.mc4wp-form .mc4wp-form-fields input[type="email"] {
+	padding: 1em;
+	width: 100%;
+	vertical-align:top;
+    -webkit-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+            box-sizing: border-box;
+    max-height: 67px;
+}
+.mc4wp-form .mc4wp-form-fields input[type="submit"] {
+	position: absolute;
+	z-index:1;
+	right: 0;
+	top: 0;
+	max-width:9.5em;
+	vertical-align:top;
+	padding: 1.4em 2.1em;
+	max-height: 67px;
+}
+
+.mc4wp-form .mc4wp-alert {
+	margin: 2em 0;
+	padding: 1em;
+}
+
+.mc4wp-form p + .terms_agree_checkbox_wrap {
+	margin-top: 1em;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) { 
+	.mc4wp-form .mc4wp-form-fields input[type="email"],
+	.mc4wp-form .mc4wp-form-fields input[type="submit"] {
+		max-height: 67px;
+	}
+	.mc4wp-form .mc4wp-form-fields input[type="submit"] {
+		top: -1px
+	}
+}
+
+@supports (-ms-ime-align:auto) {
+	.mc4wp-form .mc4wp-form-fields input[type="email"],
+	.mc4wp-form .mc4wp-form-fields input[type="submit"] {
+		max-height: 67px;
+	}
+	.mc4wp-form .mc4wp-form-fields input[type="submit"] {
+		top: -1px
+	}
+}
+
+.mc4wp-form input[type="checkbox"] {
+	display: inline-block;
+}

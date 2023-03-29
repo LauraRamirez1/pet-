@@ -1,0 +1,17 @@
+/* Essential Grid styles
+----------------------------------------------------------------- */
+.esg-grid i[class*="eg-icon-"] {
+	color: #fff;
+}
+.esg-grid a:hover i[class*="eg-icon-"] {
+	color: #000;
+}
+
+.flat-light .esg-filters .esg-sortbutton-order,
+.flat-light .esg-filters .esg-cartbutton-order {
+	line-height:36px;
+	margin:0;
+}
+.flat-light .esg-filters .esg-sortbutton {
+	padding-right: 0;
+}
