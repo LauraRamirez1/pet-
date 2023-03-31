@@ -5,57 +5,142 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet+</title>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./js/main1.js">
 
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
+  <header>
+    <nav class="row navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" style="color: #f5c271;" href="#">Pet+</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./form.html">Mi cuenta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pet_products">Nuestros productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Nuestros servicios</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+  </header>
+    <section class="row first">
+        <div data-jarallax data-speed="0.2" class="jarallax work-hero-img">
+          <img class="jarallax-img" src="./pet_img/pets_12.jpg" alt="">
+          <p  class="best_friend" style="font-family: 'Delicious Handrawn', cursive;">Porque tu mejor amigo lo merece...</p>
+          <p class="all_need" >¡Todo lo que necesita <br> tu mascota esta aquí!</p>
+        </div>
+      </section>
+      <section id="pet_products">			
+        <div class="container service-cards">
+          <div class="row">
+            <div class="title_service col-sm-12">
+              <h1>Online Store</h1>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <a class="cardImg" style="background-image: url(./pet_img/pets_81.jpg)">
+                <div class="second_text">
+                    <h1>ACCESORIOS</h1>
+                </div>
+              </a>
+            </div>
+            <div class="col-sm-12 col-md-4">
+              <a class="cardImg" style="background-image: url(./pet_img/food.jpg)">
+                <div class="second_text">
+                    <h1>ALIMENTACIÓN</h1>
+                </div>
+              </a>
+            </div>  
+            <div class="col-sm-12 col-md-4">
+              <a class="cardImg" style="background-image: url(./pet_img/pets_8.jpg)">
+                <div class="second_text">
+                    <h1>SALUD</h1>
+                </div>
+              </a>
+            </div>         
           </div>
         </div>
-      </nav>
-      <div class="jarallax">
-        <img class="jarallax-img" src="./pet_img/pets_2.jpg" alt="">
-            Your content here...
+      </section>
+      <section id="services">
+        <div class="container">		
+            <div class="row">
+              <div class="title_service col-sm-12">
+                <h1>Nuestros Servicios</h1>
+                <p>Porque siempre quieres + para tus mascotas. En Pet+ somos un equipo de profesionales al servicio y cuidado de los más consentidos de la familia. </p>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="card" style="width: 18rem;">
+                  <img src="./pet_img/transport.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">PetBus</h5>
+                    <p class="card-text">Estamos comprometidos en entregar un servicio de transporte personalizado basados en el cuidado, el cariño, la higiene y la seguridad. Garantizando así que nuestras mascotas lleguen felices y perfecto estado a su destino.</p>
+                    <a href="https://api.whatsapp.com/send?phone=+56968426601&text=Hola, necesito llevar a mi mascota (Nombre, Raza, tamaño, edad, fecha de viaje, hora de salida, dirección de partida, dirección de llegada, nombre del dueño, correo electronico, otro número de contacto y recomendaciones )" class="btn btn-primary">Agende su viaje</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-12 col-md-6">
+                <div class="card" style="width: 18rem;">
+                  <img src="./pet_img/vet.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Atención Veterinaria</h5>
+                    <p class="card-text">Nuestros servicios veterinarios van orientados a la atención de su mascota en un ambiente amigable y libre de estrés, además es importante destacar que todos nuestros médicos veterinarios son de la Universidad de Chile con postítulo obligatorio de especialización en animales menores.</p>
+                    <a href="https://api.whatsapp.com/send?phone=+56968426601&text=Hola, necesito Atención veterinaria para mi mascota. (Indicar si es una urgencia y si desea un servicio online o presencial)" class="btn btn-primary">Solicite su cita</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      <footer>
+        <div class="row">
+          <div class="col-md-4 footer-logo">
+            <img src="./pet_img/logo_1.jpeg" class="logo" alt="Pet+">
+          </div>
+          <div class="col-md-4 contact-info">
+            <a href="#" class="footer-btn">Trabaja con nosotros</a>
+            <ul><br>
+              <li>
+                <a href="#" target="_blank"><img src="./pet_img/icono_tw.png" alt="twitter"></a>
+              </li>
+              <li>
+                <a href="https://api.whatsapp.com/send?phone=+56968426601&text=Hola, necesito ayuda con mi mascota.." target="_blank"><img src="./pet_img/icono_wsp.png" alt="whatsapp"></a>
+              </li>
+              <li>
+                <a href="#e" target="_blank"><img src="./pet_img/instagram.png" alt=""></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 contact-info">
+            <div class="data">
+              <img src="./pet_img/icono_telefono.png" class="img-fix" alt="">
+              <p>321 4262883</p>
+            </div>
+            <div class="data">
+              <img src="./pet_img/icono_ubicacion.png" alt="">
+              <p>Chía, Cund. Colombia</p>
+            </div><br>
+          </div>
+        </div>
+      </footer>
+      <div class="copy">
+          <p>Copyright © Pet+ 2023</p> 
       </div>
-      <div class="prueba">
-        <p>prueba</p>
-      </div>
-      
-      <script src="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      
-
+    <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
