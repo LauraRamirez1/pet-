@@ -3,9 +3,6 @@
     padding: 0;
     box-sizing: border-box;
   }
-  body{
-    
-  }
 
   a{
     text-decoration: none;
@@ -32,8 +29,6 @@
     align-items: center;
     justify-content: center;
     background-size: cover;
-
-
 
 }
 

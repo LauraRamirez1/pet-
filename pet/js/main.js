@@ -1,103 +1,90 @@
-function setFormMessage(formElement, type, message) {
-    const messageElement = formElement.querySelector(".form__message");
 
-    messageElement.textContent = message;
-    messageElement.classList.remove("form__message--success", "form__message--error");
-    messageElement.classList.add(`form__message--${type}`);
+const formulario = document.getElementById('login');
+const inputs = document.querySelectorAll('#login input');
+
+const expresiones = {
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
+	password: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])\w{8,}$/
 }
 
-function setInputError(inputElement, message) {
-    inputElement.classList.add("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = message;
+const campos = {
+	nombre: false,
+	password: false,
 }
 
-function clearInputError(inputElement) {
-    inputElement.classList.remove("form__input--error");
-    inputElement.parentElement.querySelector(".form__input-error-message").textContent = "";
+const validarFormulario = (e) => {
+	switch (e.target.name) {
+		case "nombre":
+			validarCampo(expresiones.nombre, e.target, 'nombre');
+		break;
+		case "password":
+			validarCampo(expresiones.password, e.target, 'password');
+			validarPassword2();
+		break;
+	}
 }
 
+const validarCampo = (expresion, input, campo) => {
+	if(expresion.test(input.value)){
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
+		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
+		campos[campo] = true;
+	} else {
+		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
+		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
+		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
+		campos[campo] = false;
+	}
+}
 
+const validarPassword2 = () => {
+	const inputPassword1 = document.getElementById('password');
+	const inputPassword2 = document.getElementById('password2');
 
+	if(inputPassword1.value !== inputPassword2.value){
+		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-correcto');
+		document.querySelector(`#grupo__password2 i`).classList.add('fa-times-circle');
+		document.querySelector(`#grupo__password2 i`).classList.remove('fa-check-circle');
+		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.add('formulario__input-error-activo');
+		campos['password'] = false;
+	} else {
+		document.getElementById(`grupo__password2`).classList.remove('formulario__grupo-incorrecto');
+		document.getElementById(`grupo__password2`).classList.add('formulario__grupo-correcto');
+		document.querySelector(`#grupo__password2 i`).classList.remove('fa-times-circle');
+		document.querySelector(`#grupo__password2 i`).classList.add('fa-check-circle');
+		document.querySelector(`#grupo__password2 .formulario__input-error`).classList.remove('formulario__input-error-activo');
+		campos['password'] = true;
+	}
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.querySelector("#login");
-    const createAccountForm = document.querySelector("#createAccount");
-
-    document.querySelector("#linkCreateAccount").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.add("form--hidden");
-        createAccountForm.classList.remove("form--hidden");
-    });
-
-    document.querySelector("#linkLogin").addEventListener("click", e => {
-        e.preventDefault();
-        loginForm.classList.remove("form--hidden");
-        createAccountForm.classList.add("form--hidden");
-    });
-
-    loginForm.addEventListener("submit", e => {
-        e.preventDefault();
-        
-        // Perform your AJAX/Fetch login
-
-        setFormMessage(loginForm, "error", "Combinación inválida de Usuario/Contraseña");
-           
-    
-    });
-
-    document.querySelectorAll(".form__input").forEach(inputElement => {
-        inputElement.addEventListener("blur", e => {
-            if (e.target.id === "signupUsername" && e.target.value.length > 0 && e.target.value.length < 5) {
-                setInputError(inputElement, "Nombre de usario debe tener al menos 5 caracteres");
-            }
-
-            /* Validaciones contraseña en creación de cuenta */
-
-            if (e.target.id === "signupPassword" && e.target.value.length > 0 && e.target.value.length < 10) {
-                setInputError(inputElement, "Contraseña debe tener al menos 10 caracteres");
-            }
-
-            re = /[0-9]/;
-            if (e.target.id === "signupPassword" && !re.test(e.target.value)) {
-                setInputError(inputElement, "Contraseña debe tener al menos un número");
-            }
-
-            re = /[a-z]/;
-            if (e.target.id === "signupPassword" && !re.test(e.target.value)) {
-                setInputError(inputElement, "Contraseña debe contener al menos una letra minúscula");
-            }
-
-            re = /[A-Z]/;
-            if (e.target.id === "signupPassword" && !re.test(e.target.value)) {
-                setInputError(inputElement, "Contraseña debe contener al menos una letra mayúscula");
-            }
-
-            re = /[_?!<>]/;
-            if (e.target.id === "signupPassword" && !re.test(e.target.value)) {
-                setInputError(inputElement, "Contraseña debe contener al menos un caracter especial (_?!<>)");
-            }
-            
-            /* Validaciones email en creación de cuenta */
-
-
-            mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-            if (e.target.id === "signupEmail" && !mailformat.test(e.target.value)) {
-                setInputError(inputElement, "asdasdas");
-            }
-           
-            
-
-
-
-        });
-
-
-        inputElement.addEventListener("input", e => {
-            clearInputError(inputElement);
-        });
-
-
-    });
-
-
+inputs.forEach((input) => {
+	input.addEventListener('keyup', validarFormulario);
+	input.addEventListener('blur', validarFormulario);
 });
+
+formulario.addEventListener('submit', (e) => {
+	e.preventDefault();
+
+	const terminos = document.getElementById('terminos');
+	if(campos.nombre && campos.password ){
+		formulario.reset();
+
+		document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
+		setTimeout(() => {
+			document.getElementById('formulario__mensaje-exito').classList.remove('formulario__mensaje-exito-activo');
+		}, 5000);
+
+		document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
+			icono.classList.remove('formulario__grupo-correcto');
+		});
+	} else {
+		document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
+	}
+});
+
