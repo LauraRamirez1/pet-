@@ -288,7 +288,7 @@ FORM */
   box-shadow: none;
 }
 .form__text a:hover{
-  color: #369d9c;
+  color: #0d4645;
 }
 
 /* ----------------------------------------------------------------------------------------
@@ -297,6 +297,10 @@ CREATE */
 .contact-form{
   padding-top: 3rem;
   padding-bottom: 3rem;
+  background-image: url(../pet_img/pets_3.jpg);
+  background-repeat: no-repeat;
+  background-position:initial;
+  background-size: cover;
 }
 .form_one{
   display: flex;
@@ -309,11 +313,15 @@ CREATE */
   margin-bottom: 1rem;
 }
 .contact-form h2{
-  padding-top: 4rem;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
   color: #f5c271;
   font-family:'Delicious Handrawn', cursive; ;
 }
 
 #field-error{
   display: none;
+}
+.button-row{
+  padding-bottom: 5rem;
 }
