@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet+</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link href="../css/style_form.css" rel="stylesheet" media="screen">
+</head>
+<body>
+    <div class="container">
+        <form class="form" id="login" action="/" method="GET">
+            <h1 class="form__title">Iniciar sesión</h1>
+            
+            <div class="form__message form__message--error"></div>
+            
+            <div class="form__input-group">
+                <input type="text" class="form__input" id="loginUsername" autofocus placeholder="Nombre de usuario" required>
+                <div class="form__input-error-message"></div>
+            </div>
+            
+            <div class="form__input-group">
+                <input type="password" id="loginPassword" class="form__input" autofocus placeholder="Contraseña" required>
+                <div class="form__input-error-message"></div>
+            </div>
+            
+            <button class="form__button" type="submit">Continuar</button>
+            
+            <p class="form__text">
+                <a href="#" class="form__link">Olvidaste tu contraseña?</a>
+            </p>
+            
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkCreateAccount">No tienes una cuenta? Crear cuenta</a>
+            </p>
+        
+        </form>
+        <form class="form form--hidden" id="createAccount">
+            <h1 class="form__title">Crear Cuenta</h1>
+            
+            <div class="form__message form__message--error"></div>
+            
+            <div class="form__input-group">
+                <input type="text" id="signupUsername" class="form__input" autofocus placeholder="Nombre de usuario">
+                    <div class="form__input-error-message"></div>
+            </div>
+            
+            <div class="form__input-group">
+                <input type="email" id="signupEmail" class="form__input" autofocus placeholder="Correo electrónico">
+                        <div class="form__input-error-message"></div>
+            </div>
+            
+            <div class="form__input-group">
+                <input type="password" id="signupPassword" class="form__input" autofocus placeholder="Contraseña">
+                    <div class="form__input-error-message"></div>
+            </div>
+            
+            <div class="form__input-group">
+                <input type="password" class="form__input" autofocus placeholder="Confirma tu contraseña">
+                    <div class="form__input-error-message"></div>
+            </div>
+            
+            <button class="form__button" type="submit">Continue</button>
+            
+            <p class="form__text">
+                <a class="form__link" href="./" id="linkLogin">Ya tienes una cuenta? Iniciar sesión </a>
+            </p>
+
+        </form>
+    </div>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>

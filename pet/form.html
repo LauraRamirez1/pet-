@@ -5,37 +5,75 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet+</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="./css/style_form.css" rel="stylesheet" media="screen">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
 <body>
-    <div class="container">
-        <form class="form" id="login" action="/" method="GET">
-            <h1 class="form__title">Iniciar sesión</h1>
-            
-            <div class="form__message form__message--error"></div>
-            
-            <div class="form__input-group">
-                <input type="text" class="form__input" id="loginUsername" autofocus placeholder="Nombre de usuario" required>
-                <div class="form__input-error-message"></div>
+    <header>
+        <nav class="row navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" style="color: #f5c271;" href="./index.html">Pet+</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./form.html">Mi cuenta</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html#pet_products">Nuestros productos</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./index.html#services">Nuestros servicios</a>
+                </li>
+              </ul>
+              <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+              </form>
             </div>
-            
-            <div class="form__input-group">
-                <input type="password" id="loginPassword" class="form__input" autofocus placeholder="Contraseña" required>
-                <div class="form__input-error-message"></div>
-            </div>
-            
-            <button class="form__button" type="submit">Continuar</button>
-            
-            <p class="form__text">
-                <a href="#" class="form__link">Olvidaste tu contraseña?</a>
-            </p>
-            
-            <p class="form__text">
-                <a class="form__link" href="./" id="linkCreateAccount">No tienes una cuenta? Crear cuenta</a>
-            </p>
-        
-        </form>
+          </div>
+        </nav>
+    </header>
+		<section class="work-hero">
+			<div data-jarallax data-speed="0.2" class="jarallax contact">
+				<img class="jarallax-img" src="./pet_img/pets_10.jpg" alt="">
+				<div class="container">
+					<div class="row"> 
+						<div class="col-sm-12 msg">
+              <form class="form" id="login" action="/" method="GET">
+                <h3 class="form__title">Te damos la bienvenida <br> a Pet+</h3>
+                
+                <div class="form__message form__message--error"></div><br>
+                
+                <div class="form__input-group">
+                    <input type="text" class="form__input" id="loginUsername" autofocus placeholder="Nombre de usuario" required>
+                    <div class="form__input-error-message"></div>
+                </div><br>
+                
+                <div class="form__input-group">
+                    <input type="password" id="loginPassword" class="form__input" autofocus placeholder="Contraseña" required>
+                    <div class="form__input-error-message"></div>
+                </div><br>
+                
+                <button class="btn-primary form__button" type="submit">Continuar</button><br><br>
+                
+                <p class="form__text">
+                    <a href="#" class="form__link">¿Olvidaste tu contraseña?</a>
+                </p>
+                
+                <p class="form__text">
+                    <a class="form__link" href="./" id="linkCreateAccount">¿No tienes una cuenta? Crear cuenta</a>
+                </p>
+            </form>
+						</div>
+					</div>
+				</div>
+			</div>	
+			</div>
+		</section>
+    <section style="display: none;">
         <form class="form form--hidden" id="createAccount">
             <h1 class="form__title">Crear Cuenta</h1>
             
@@ -66,10 +104,40 @@
             <p class="form__text">
                 <a class="form__link" href="./" id="linkLogin">Ya tienes una cuenta? Iniciar sesión </a>
             </p>
-
         </form>
-    </div>
-    <script src="./main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-
+    </section>
+    <footer>
+      <div class="row">
+        <div class="col-md-4 footer-logo">
+          <img src="./pet_img/logo_1.jpeg" class="logo" alt="Pet+">
+        </div>
+        <div class="col-md-4 contact-info">
+          <a href="https://api.whatsapp.com/send?phone=+573138612304&text=Hola, estoy intersad@ en trabajar con ustedes (Indicar si es como transportador o médico veterinario)" class="footer-btn">Trabaja con nosotros</a>
+          <ul><br>
+            <li>
+              <a href="#" target="_blank"><img src="./pet_img/icono_tw.png" alt="twitter"></a>
+            </li>
+            <li>
+              <a href="https://api.whatsapp.com/send?phone=+573138612304&&text=Hola, necesito ayuda con mi mascota.." target="_blank"><img src="./pet_img/icono_wsp.png" alt="whatsapp"></a>
+            </li>
+            <li>
+              <a href="#e" target="_blank"><img src="./pet_img/instagram.png" alt=""></a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 contact-info">
+          <div class="data">
+            <img src="./pet_img/icono_telefono.png" class="img-fix" alt="">
+            <p>321 4262883</p>
+          </div>
+          <div class="data">
+            <img src="./pet_img/icono_ubicacion.png" alt="">
+            <p>Chía, Cund. Colombia</p>
+          </div><br>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/main.js"></script> 
+    <script src="https://unpkg.com/jarallax@1.10/dist/jarallax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
