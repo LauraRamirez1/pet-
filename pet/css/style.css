@@ -267,8 +267,8 @@ FORM */
 .msg{
   padding: 2rem;
   background-color: #3c3c3cba;
-  margin-top: 10rem;
-  margin-bottom: 10rem;
+  margin-top: 11rem;
+  margin-bottom: 11rem;
   border-radius: 12px;
   border: 2px solid #f5c271;
 }
@@ -289,4 +289,31 @@ FORM */
 }
 .form__text a:hover{
   color: #369d9c;
+}
+
+/* ----------------------------------------------------------------------------------------
+CREATE */
+
+.contact-form{
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.form_one{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form_one input{
+  width: 16rem;
+  margin-bottom: 1rem;
+}
+.contact-form h2{
+  padding-top: 4rem;
+  color: #f5c271;
+  font-family:'Delicious Handrawn', cursive; ;
+}
+
+#field-error{
+  display: none;
 }
